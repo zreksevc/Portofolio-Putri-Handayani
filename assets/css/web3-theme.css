@@ -1,0 +1,64 @@
+/* --- assets/css/web3-theme.css --- */
+
+:root {
+    --color-neon-primary: #00eaff; /* Biru Cyan Neon */
+    --color-neon-secondary: #a600ff; /* Ungu Neon (untuk Light Mode) */
+    --color-dark-bg: #0b0f19; /* Background Sangat Gelap */
+    --color-light-bg: #f0f4f8; /* Background Mode Terang */
+    --color-text-dark: #e0f7fa; /* Teks Mode Gelap */
+    --color-text-light: #1a202c; /* Teks Mode Terang */
+    
+    /* Default ke Dark Mode */
+    --bg-primary: var(--color-dark-bg);
+    --text-color: var(--color-text-dark);
+    --neon-color: var(--color-neon-primary);
+    --glass-bg: rgba(18, 24, 34, 0.7);
+    --border-glow: rgba(0, 255, 255, 0.3);
+}
+
+/* Glassmorphism Effect */
+.glass-effect {
+    backdrop-filter: blur(10px);
+    background-color: var(--glass-bg);
+    border: 1px solid var(--border-glow);
+    box-shadow: 0 0 15px var(--border-glow);
+}
+
+/* Neon Text Effect */
+.neon-text {
+    color: var(--neon-color);
+    text-shadow: 0 0 5px var(--neon-color), 0 0 10px var(--neon-color);
+    transition: text-shadow 0.3s;
+}
+
+/* Style Dark Mode (Default) */
+.dark-mode {
+    background-color: var(--color-dark-bg);
+    color: var(--color-text-dark);
+}
+
+/* Style Light Mode */
+.light-mode {
+    --bg-primary: var(--color-light-bg);
+    --text-color: var(--color-text-light);
+    --neon-color: var(--color-neon-secondary); 
+    --glass-bg: rgba(255, 255, 255, 0.7);
+    --border-glow: rgba(166, 0, 255, 0.3);
+    
+    background-color: var(--color-light-bg);
+    color: var(--color-text-light);
+}
+
+.light-mode .neon-text {
+    text-shadow: 0 0 5px var(--neon-color);
+}
+
+/* Button Glow Effect */
+.btn-primary.glow {
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+    position: relative;
+    z-index: 1;
+}
+.btn-primary.glow:hover {
+    box-shadow: 0 0 30px var(--neon-color);
+}

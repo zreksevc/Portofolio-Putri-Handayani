@@ -1,0 +1,28 @@
+/* --- assets/css/variables.css --- */
+:root {
+    /* Fonts */
+    --font-primary: 'Space Mono', monospace;
+    --font-secondary: 'Inter', sans-serif;
+
+    /* Spacing */
+    --padding-sm: 1rem;
+    --padding-md: 2rem;
+    --padding-lg: 4rem;
+
+    /* Color Base (Ambil dari web3-theme.css) */
+    --primary-color-base: var(--color-neon-primary, #00eaff);
+    --secondary-color-base: var(--color-neon-secondary, #a600ff);
+    
+    /* Global Background/Text */
+    --bg-primary: var(--color-dark-bg);
+    --text-color: var(--color-text-dark);
+    --neon-color: var(--primary-color-base);
+    
+    /* Component Colors */
+    --card-bg: var(--glass-bg);
+    --border-color: var(--border-glow);
+
+    /* Transitions */
+    --transition-fast: 0.2s ease-in-out;
+    --transition-slow: 0.4s ease;
+}

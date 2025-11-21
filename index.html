@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio Website - Web3 Developer & Designer">
+    <title>Home - YourName Portfolio</title>
+    
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/variables.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/web3-theme.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
+</head>
+<body class="dark-mode">
+    <div id="loader" class="loader">
+        <div class="loader-content">
+            <div class="spinner"></div>
+            <p class="neon-text">Hacking into the Matrix...</p>
+        </div>
+    </div>
+
+    <nav class="navbar glass-effect">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-circle">
+                    <span class="logo-text">WEB</span>
+                </div>
+                <span class="logo-name">Putri Handayani</span>
+            </a>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link btn-connect-wallet">Contact</a></li>
+            </ul>
+            
+            <div class="nav-right">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <span class="icon">☀️</span>
+                </button>
+                
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="particles" id="particles"></div>
+            
+            <div class="hero-content">
+                <div class="profile-image-container animate-float">
+                    <div class="profile-glow"></div>
+                    <img src="assets/images/profile.jpg" alt="Profile" class="profile-image" onerror="this.src='https://via.placeholder.com/300x300/0b0f19/00eaff?text=Your+Photo'">
+                </div>
+                
+                <h1 class="hero-title">
+                    <span class="greeting">Hello, I'm</span>
+                    <span class="name glitch-text" data-text="Your Name">Putri Handayani</span>
+                </h1>
+                
+                <p class="hero-subtitle neon-text">
+                    <span class="typed-text"></span>
+                    <span class="cursor">|</span>
+                </p>
+                
+                <div class="cta-buttons">
+                    <a href="about.html" class="btn btn-primary glow">
+                        <span>Discover My Profile</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                   </div>
+                
+                <div class="social-links">
+                    <a href="https://github.com" target="_blank" class="social-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com" target="_blank" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://instagram.com" target="_blank" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta section-padding" id="cta">
+            <div class="container text-center">
+                <h2 class="cta-title animate-on-scroll">Siap Membangun <span class="neon-text">Inovasi</span> Web3 Selanjutnya?</h2>
+                <p class="cta-subtitle animate-on-scroll">Mari berkolaborasi dalam proyek yang transformatif.</p>
+                <a href="contact.html" class="btn btn-primary btn-large glow animate-on-scroll">
+                    <span>Let's Talk!</span>
+                    <i class="fas fa-comment-dots"></i>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <h3 class="footer-logo">Putri <span class="neon-text">Handayani</span></h3>
+                    <p class="footer-desc">Building the decentralized future, one line of code at a time.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-social">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="https://github.com" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+                        <a href="https://linkedin.com" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                        <a href="mailto:your.email@example.com" class="social-icon"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>Putri Handayani - Web Portofolio</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/utils.js"></script>
+    <script src="assets/js/animations.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

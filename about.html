@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Portfolio</title>
+    
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/variables.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/web3-theme.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
+    
+    <style>
+        /* CSS Khusus Halaman About */
+        
+        /* Layout untuk Biodata dan Maps */
+        .bio-maps-container {
+            display: flex;
+            flex-wrap: wrap; /* Memastikan kolom turun ke bawah di mobile */
+            gap: 4rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 1rem;
+        }
+
+        .bio-data-column {
+            flex: 2; /* Mengambil 2/3 ruang */
+            min-width: 300px; /* Lebar minimum */
+        }
+
+        .maps-column {
+            flex: 1; /* Mengambil 1/3 ruang */
+            min-width: 250px;
+            text-align: center;
+        }
+
+        .map-wrapper {
+            width: 100%;
+            height: 400px; /* Tinggi peta */
+            border-radius: 15px;
+            overflow: hidden;
+            border: 2px solid var(--neon-color);
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
+        }
+
+        .map-wrapper iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        /* Gaya Timeline dan Skills (Sama seperti sebelumnya) */
+        .timeline { /* ... [Gaya Timeline seperti di jawaban sebelumnya] ... */ }
+        .timeline::after { /* ... */ }
+        .timeline-item { /* ... */ }
+        .left, .right { /* ... */ }
+        .timeline-content { /* ... */ }
+        .skills-grid { /* ... */ }
+        .skill-category { /* ... */ }
+        .tech-badge { /* ... */ }
+
+        /* Responsive Timeline (Sama seperti sebelumnya) */
+        @media screen and (max-width: 768px) {
+            .bio-maps-container {
+                flex-direction: column;
+                gap: 2rem;
+            }
+            .bio-data-column, .maps-column {
+                min-width: unset;
+                width: 100%;
+            }
+            .map-wrapper {
+                height: 300px;
+            }
+            
+            /* ... [Sertakan kembali media query untuk timeline jika diperlukan] ... */
+        }
+    </style>
+</head>
+<body class="dark-mode">
+    <nav class="navbar glass-effect">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-circle">
+                    <span class="logo-text">WEB</span>
+                </div>
+                <span class="logo-name"> Putri Handayani</span>
+            </a>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link active">About</a></li>
+                <li><a href="contact.html" class="nav-link btn-connect-wallet">Contact</a></li>
+            </ul>
+            
+            <div class="nav-right">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <span class="icon">☀️</span>
+                </button>
+                
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="about-main section-padding" id="bio-maps">
+            <div class="container text-center">
+                <h1 class="section-title animate-on-scroll">
+                    My <span class="neon-text">Profile</span> & Location
+                </h1>
+            </div>
+            
+            <div class="bio-maps-container">
+                <div class="bio-data-column animate-on-scroll">
+                    <h2 class="neon-text">Biodata Singkat</h2>
+                    <p style="margin-top: 1rem; line-height: 1.8;">
+                        Nama saya  Putri Handayani, seorang mahasiswi Web3 Developer dan UI/UX Designer di Universitas Muhammadiyah Buton Sulawesi, Indonesia.
+                    </p>
+
+                    <ul style="margin-top: 2rem; list-style: none; padding-left: 0;">
+                        <li style="margin-bottom: 10px;"><i class="fas fa-id-card" style="color: var(--neon-color); width: 25px;"></i> Nama: Putri Handayani</li>
+                        <li style="margin-bottom: 10px;"><i class="fas fa-code" style="color: var(--neon-color); width: 25px;"></i> Profesi: Web3 Developer</li>
+                        <li style="margin-bottom: 10px;"><i class="fas fa-map-marker-alt" style="color: var(--neon-color); width: 25px;"></i> Base: Sulawesi, Indonesia</li>
+                        <li style="margin-bottom: 10px;"><i class="fas fa-graduation-cap" style="color: var(--neon-color); width: 25px;"></i> Kuliah: Universitas Muhammadiyah Buton</li>
+                    </ul>
+                    
+                                   </div>
+
+                <div class="maps-column animate-on-scroll delay-200 glass-effect" style="padding: 1.5rem;">
+                    <h3 class="neon-text" style="margin-bottom: 1rem;"><i class="fas fa-university"></i> Lokasi Kampus</h3>
+                    <div class="map-wrapper">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3971.697420150687!2d122.59729687308193!3d-5.462802054449814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2da476c4603e30dd%3A0xb0d75e135d429aa2!2sUniversitas%20Muhammadiyah%20Buton%20-%20Kampus%201!5e0!3m2!1sid!2sid!4v1763729150622!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        </div>
+                    <p style="margin-top: 0.75rem; font-size: 0.9rem;">
+                        Universitas Muhammadiyah Buton.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+<footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <h3 class="footer-logo">Putri <span class="neon-text">Handayani</span></h3>
+                    <p class="footer-desc">Building the decentralized future, one line of code at a time.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-social">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="https://github.com" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+                        <a href="https://linkedin.com" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                        <a href="mailto:your.email@example.com" class="social-icon"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>Putri Handayani - Web Portofolio</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/utils.js"></script>
+    <script src="assets/js/animations.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
