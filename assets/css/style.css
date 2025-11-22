@@ -79,16 +79,38 @@ body {
     position: relative;
     min-height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     overflow: hidden;
+    padding: 6rem 1rem 2rem;
+    color: var(--text-colore);
 }
 .hero-content {
+   position: relative;
     z-index: 10;
+    max-width: 900px;
+    width: 100%;
+    /* Pastikan tidak ada margin-left atau margin-right yang mengganggu pemusatan */
+    margin-left: auto; /* Ini penting */
+    margin-right: auto; /* Ini penting */
+    text-align: center;
 }
+
+.profile-image-container {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    /* ... */
+    
+    /* PENTING: Dua properti ini harus ada */
+    margin: 0 auto 2.5rem; 
+    display: block; 
+}
+
 .profile-image {
-    width: 200px;
+     width: 200px;
     height: 200px;
     border-radius: 50%;
     border: 5px solid var(--neon-color);

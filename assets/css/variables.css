@@ -18,10 +18,13 @@
     --text-color: var(--color-text-dark);
     --neon-color: var(--primary-color-base);
     
+    /* VARIABEL BARU UNTUK LATAR BELAKANG SEKUNDER (FOOTER) */
+    --secondary-bg-dark: #1a202c; /* Warna latar sekunder gelap (untuk dark mode) */
+    --secondary-bg-light: #e0e6ec; /* Warna latar sekunder terang (untuk light mode) */
+    --secondary-bg: var(--secondary-bg-dark); /* Alias default */
+    
     /* Component Colors */
     --card-bg: var(--glass-bg);
-    --border-color: var(--border-glow);
-
     /* Transitions */
     --transition-fast: 0.2s ease-in-out;
     --transition-slow: 0.4s ease;

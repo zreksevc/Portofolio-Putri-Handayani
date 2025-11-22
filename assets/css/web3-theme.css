@@ -6,7 +6,7 @@
     --color-dark-bg: #0b0f19; /* Background Sangat Gelap */
     --color-light-bg: #f0f4f8; /* Background Mode Terang */
     --color-text-dark: #e0f7fa; /* Teks Mode Gelap */
-    --color-text-light: #1a202c; /* Teks Mode Terang */
+    --color-text-light: #000000; /* Teks Mode Terang */
     
     /* Default ke Dark Mode */
     --bg-primary: var(--color-dark-bg);
@@ -15,7 +15,24 @@
     --glass-bg: rgba(18, 24, 34, 0.7);
     --border-glow: rgba(0, 255, 255, 0.3);
 }
+/* 🚀 METODE BARU: Target Footer Secara Eksplisit di Light Mode */
+.light-mode .footer {
+    /* Atur warna latar belakang footer menjadi terang (abu-abu muda) */
+    background-color: #e0e6ec !important; 
+    
+    /* Atur warna teks di footer menjadi gelap */
+    color: var(--color-text-light) !important; 
+}
 
+/* Atur warna teks di footer-bottom */
+.light-mode .footer-bottom p {
+    color: var(--color-text-light) !important;
+}
+
+/* Pastikan semua link di footer juga gelap */
+.light-mode .footer a {
+    color: var(--color-text-light) !important;
+}
 /* Glassmorphism Effect */
 .glass-effect {
     backdrop-filter: blur(10px);
@@ -40,10 +57,16 @@
 /* Style Light Mode */
 .light-mode {
     --bg-primary: var(--color-light-bg);
-    --text-color: var(--color-text-light);
+    
+    /* PENTING: Teks utama harus gelap di Light Mode agar kontras */
+    --text-color: var(--color-text-light); 
+    
     --neon-color: var(--color-neon-secondary); 
     --glass-bg: rgba(255, 255, 255, 0.7);
     --border-glow: rgba(166, 0, 255, 0.3);
+    
+    /* PERBAIKAN: Set latar belakang sekunder (footer) ke warna terang */
+    --secondary-bg: var(--secondary-bg-light); 
     
     background-color: var(--color-light-bg);
     color: var(--color-text-light);
